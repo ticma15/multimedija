@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Filip Matić</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">Moj Portfolio</h1>
+                <ul class="nav-menu">
+                    <li><a href="#home">Početna</a></li>
+                    <li><a href="#about">O meni</a></li>
+                    <li><a href="#education">Obrazovanje</a></li>
+                    <li><a href="#experience">Iskustvo</a></li>
+                    <li><a href="#skills">Vještine</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <!-- Slika u nižoj rezoluciji - klik otvara veću verziju -->
+                <img src="images/profile-small.jpg" 
+                     alt="Profilna slika Filipa Matića" 
+                     class="profile-image"
+                     onclick="openImageModal('images/profile-large.jpg')"
+                     title="Kliknite za veću sliku">
+            </div>
+            <div class="hero-text">
+                <h2>Pozdrav! Ja sam</h2>
+                <h1 class="name">Filip Matić</h1>
+                <p class="title">Student Fakulteta elektrotehnike, računarstva i informacijskih tehnologija Osijek</p>
+                
+                <!-- Audio prezentacija - maksimalno 15 sekundi -->
+                <div class="audio-section">
+                    <h3><i class="fas fa-microphone"></i> Poslušajte moju kratku prezentaciju</h3>
+                    <audio controls>
+                        <source src="media/audio-predstavljanje.mp3" type="audio/mpeg">
+                        Vaš preglednik ne podržava audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">O meni</h2>
+            <div class="about-content">
+                <div class="about-info">
+                    <h3>Opće informacije</h3>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Datum rođenja:</strong> 
+                            <a href="https://hr.wikipedia.org/wiki/15._veljače" target="_blank">15. Veljače 2004.</a>
+                        </li>
+                        <li>
+                            <strong>Mjesto rođenja:</strong> 
+                            <a href="https://www.osijek.hr/" target="_blank">Osijek</a>
+                        </li>
+                        <li>
+                            <strong>Mjesto stanovanja:</strong> 
+                            <a href="https://www.osijek.hr/" target="_blank">Osijek, Hrvatska</a>
+                        </li>
+                        <li>
+                            <strong>Spol:</strong> Muško
+                        </li>
+                        <li>
+                            <strong>Hobi:</strong> 
+                            <a href="https://www.crokickboxing.hr/" target="_blank">Kickboxing</a>, 
+                            <a href="https://www.youtube.com/watch?v=ohXj68OLP2g" target="_blank">Vožnja motorom</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Galerija slika u različitim formatima -->
+                <div class="image-gallery">
+                    <h3>Moje slike (različiti formati)</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/image1.jpg" 
+                                 alt="Slika 1 - JPG format" 
+                                 onclick="openImageModal('images/image1-large.jpg')"
+                                 title="JPG format - kliknite za veću sliku">
+                            <p>.JPG format</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/image2.png" 
+                                 alt="Slika 2 - PNG format" 
+                                 onclick="openImageModal('images/image2-large.png')"
+                                 title="PNG format - kliknite za veću sliku">
+                            <p>.PNG format</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/image3.gif" 
+                                 alt="Slika 3 - GIF format" 
+                                 onclick="openImageModal('images/image3-large.gif')"
+                                 title="GIF format - kliknite za veću sliku">
+                            <p>.GIF format</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/image4.bmp" 
+                                 alt="Slika 4 - BMP format" 
+                                 onclick="openImageModal('images/image4-large.bmp')"
+                                 title="BMP format - kliknite za veću sliku">
+                            <p>.BMP format</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video sekcija -->
+            <div class="video-section">
+                <h3><i class="fas fa-video"></i> Video prezentacija</h3>
+                <p>Kratki video isječak o mom mjestu stanovanja</p>
+                <video controls>
+                    <source src="media/video.mp4" type="video/mp4">
+                    Vaš preglednik ne podržava video element.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Obrazovanje</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Fakultet elektrotehnike, računarstva i informacijskih tehnologija Osijek</h3>
+                        <p class="timeline-date">2022. - trenutno</p>
+                        <p>Preddiplomski stručni studij Računarstva</p>
+                        <a href="https://www.ferit.unios.hr/" target="_blank" class="btn-link">
+                            <i class="fas fa-external-link-alt"></i> Posjeti web stranicu
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Elektrotehnička i prometna škola Osijek</h3>
+                        <p class="timeline-date">2018. - 2022.</p>
+                        <p>Smjer: Tehničar za računalstvo</p>
+                        <a href="https://elpros.net/" target="_blank" class="btn-link">
+                            <i class="fas fa-external-link-alt"></i> Posjeti web stranicu
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Osnovna škola Bilje</h3>
+                        <p class="timeline-date">2010. - 2018.</p>
+                        <a href="https://os-bilje.skole.hr/" target="_blank" class="btn-link">
+                            <i class="fas fa-external-link-alt"></i> Posjeti web stranicu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Iskustvo</h2>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Hrvatski Telekom</h3>
+                    <p class="date">Srpanj 2024. - Rujan 2025.</p>
+                    <p>Tehnička podrška putem e-maila</p>
+                </div>
+                
+                <div class="experience-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Projekti</h3>
+                    <p class="date">Tijekom studija</p>
+                    <p>Fakultetski i osobni projekti koje ste realizirali.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Vještine</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Računalne vještine</h3>
+                    <div class="skill-item">
+                        <span>HTML & CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Ostale vještine</h3>
+                    <ul class="other-skills">
+                        <li><i class="fas fa-check"></i> Timski rad</li>
+                        <li><i class="fas fa-check"></i> Komunikacijske vještine</li>
+                        <li><i class="fas fa-check"></i> Rješavanje problema</li>
+                        <li><i class="fas fa-check"></i> Upravljanje vremenom</li>
+                        <li><i class="fas fa-check"></i> Engleski jezik (C1)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colleagues Section -->
+    <section id="colleagues" class="colleagues">
+        <div class="container">
+            <h2 class="section-title">Kolege studenti</h2>
+            
+            <div class="colleagues-grid">
+                <div class="colleague-card">
+                    <div class="colleague-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>
+                        <a href="https://astmaticar.github.io/Portfolio_Studenata/projekt/index.html" target="_blank">
+                            Lana Gale i Dorijan Dragić
+                        </a>
+                    </h3>
+                </div>
+                
+                <div class="colleague-card">
+                    <div class="colleague-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>
+                        <a href="https://mt-webprojekt.onrender.com/" target="_blank">
+                            Mislav Dorinka i Dominik Dejak
+                        </a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i><br>
+                    <a href="mailto:filip.matic@student.ferit.hr">filip.matic@student.ferit.hr</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i><br>
+                    <span>+385 99 671 4855</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>
+                Ova web stranica je izrađena za vrijeme pohađanja 
+                <a href="https://www.ferit.unios.hr/" target="_blank">
+                    Fakulteta elektrotehnike, računarstva i informacijskih tehnologija u Osijeku
+                </a> 
+                u sklopu kolegija 
+                <a href="https://moodle.srce.hr/2025-2026/course/view.php?id=233933" target="_blank">
+                    Multimedijska tehnika
+                </a>.
+            </p>
+            <p>&copy; 2026 Filip Matić.</p>
+        </div>
+    </footer>
+
+    <!-- Modal za prikaz slika u većoj rezoluciji -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
